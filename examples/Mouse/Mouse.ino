@@ -14,11 +14,11 @@ void onMouseEvent(const HIDMouseEvent &event) {
   Serial.print("Mouse event (callback) - Buttons: ");
   Serial.print(event.buttons);
   Serial.print(", x: ");
-  Serial.print(event.x);
+  Serial.print(event.xMovement);
   Serial.print(", y: ");
-  Serial.print(event.y);
+  Serial.print(event.yMovement);
   Serial.print(", wheel: ");
-  Serial.println(event.wheel);
+  Serial.println(event.wheelMovement);
 }
 
 void setup() {
