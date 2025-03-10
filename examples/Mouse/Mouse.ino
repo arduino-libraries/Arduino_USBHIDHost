@@ -4,6 +4,9 @@
 // Create a global mouse instance.
 USBHIDMouse ms;
 
+HIDMouseEvent mouseEvent;
+bool eventReceived = false;
+
 // User-defined connection callback.
 void onMouseConnected() {
   Serial.println("Mouse connected (callback).");
@@ -11,14 +14,8 @@ void onMouseConnected() {
 
 // User-defined mouse event callback.
 void onMouseEvent(const HIDMouseEvent &event) {
-  Serial.print("Mouse event (callback) - Buttons: ");
-  Serial.print(event.buttons);
-  Serial.print(", x: ");
-  Serial.print(event.x);
-  Serial.print(", y: ");
-  Serial.print(event.y);
-  Serial.print(", wheel: ");
-  Serial.println(event.wheel);
+  eventReceived = true;
+  mouseEvent = event;
 }
 
 void setup() {
@@ -32,5 +29,17 @@ void setup() {
 
 void loop() {
   ms.poll();
+  
+  if(eventReceived){
+    Serial.print("Mouse event (callback) - Buttons: ");
+    Serial.print(mouseEvent.buttons);
+    Serial.print(", x: ");
+    Serial.print(mouseEvent.xMovement);
+    Serial.print(", y: ");
+    Serial.print(mouseEvent.yMovement);
+    Serial.print(", wheel: ");
+    Serial.println(mouseEvent.wheelMovement);
+    eventReceived = false;
+  }
   // Additional mouse processing if needed.
 }

@@ -6,6 +6,8 @@
 #include "Mouse.h"
 #include <stdio.h>
 
+extern USBHIDKeyboard* keyboardInstance;
+extern USBHIDMouse* mouseInstance;
 // Mapping from HID keycodes to ASCII.
 // This macro should be provided by your USB host/HID stack.
 static uint8_t const keycodeToAscii[128][2] = { HID_KEYCODE_TO_ASCII };
