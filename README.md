@@ -1,8 +1,11 @@
 # Arduino_USBHIDHost
 
+<<<<<<< HEAD
 [![Check Arduino](https://github.com/bcmi-labs/Arduino_USBHIDHost/actions/workflows/check-arduino.yml/badge.svg)](https://github.com/bcmi-labs/Arduino_USBHIDHost/actions/workflows/check-arduino.yml) [![Compile Examples](https://github.com/bcmi-labs/Arduino_USBHIDHost/actions/workflows/compile-examples.yml/badge.svg)](https://github.com/bcmi-labs/Arduino_USBHIDHost/actions/workflows/compile-examples.yml) [![Spell Check](https://github.com/bcmi-labs/Arduino_USBHIDHost/actions/workflows/spell-check.yml/badge.svg)](https://github.com/bcmi-labs/Arduino_USBHIDHost/actions/workflows/spell-check.yml) [![Sync Labels](https://github.com/bcmi-labs/Arduino_USBHIDHost/actions/workflows/sync-labels.yml/badge.svg)](https://github.com/bcmi-labs/Arduino_USBHIDHost/actions/workflows/sync-labels.yml)
 
 
+=======
+>>>>>>> 3734666 (added barcode and combo example)
 This library provides support for USB HID devices such as keyboards and mice on the Portenta C33. It should support any device that emulates keyboards (for example, barcode readers). The library automatically detects the insertion of a compatible device on the USB port of the chosen breakout board. You can use `attachConnectionCallback()` to get notified when a compatible device is connected.
 
 The library has two main classes:
@@ -14,6 +17,7 @@ The library has two main classes:
 - **examples/Mouse** – Demonstrates receiving mouse events via a callback.
 - **examples/Keyboard** – Demonstrates receiving keyboard events via both callbacks and the Stream interface.
 - **examples/MouseAndKeyboard** – Demonstrates simultaneous support for both mouse and keyboard devices.
+- **examples/Barcode** - Uses tthe HID Host implementation to read 13-digit EAN codes from a USB based barcode reader. 
 
 ## Usage
 
