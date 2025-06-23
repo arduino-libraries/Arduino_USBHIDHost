@@ -11,7 +11,7 @@ The library has two main classes:
 - **examples/Mouse** – Demonstrates receiving mouse events via a callback.
 - **examples/Keyboard** – Demonstrates receiving keyboard events via both callbacks and the Stream interface.
 - **examples/MouseAndKeyboard** – Demonstrates simultaneous support for both mouse and keyboard devices.
-- **examples/Barcode** - Uses tthe HID Host implementation to read 13-digit EAN codes from a USB based barcode reader. 
+- **examples/Barcode** - Uses the HID Host implementation to read 13-digit EAN codes from a USB based barcode reader. 
 
 ## Usage
 
