@@ -1,5 +1,5 @@
 #include <Arduino.h>
-#include "Keyboard.h"
+#include <Arduino_USBHIDHost.h>
 
 USBHIDKeyboard kb;
 
