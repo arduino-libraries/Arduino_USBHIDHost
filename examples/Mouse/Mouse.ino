@@ -1,5 +1,5 @@
 #include <Arduino.h>
-#include "Mouse.h"
+#include <Arduino_USBHIDHost.h>
 
 // Create a global mouse instance.
 USBHIDMouse ms;
