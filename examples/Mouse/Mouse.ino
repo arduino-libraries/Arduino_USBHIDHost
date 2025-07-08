@@ -1,3 +1,5 @@
+/* This simple example shows how to read mouse data, like cursor position and key states, by registering a callback and listening for events */
+
 #include <Arduino.h>
 #include <Arduino_USBHIDHost.h>
 

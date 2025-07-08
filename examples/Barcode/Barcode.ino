@@ -1,3 +1,9 @@
+/* 
+ * By connecting a  handheld  barcode  reader  to the USB-A port  on  the  mid-carrier board  of  your Arduino Portenta C33,
+ * you  should  immediately  be  able to  read standard 13-digit  bar codes  on any  ordinary  commercial  product packaging.
+ * Please note that barcodes longer than 13 digits will result in the "Invalid character detected, resetting..." being printed.
+ */
+
 #include <Arduino.h>
 #include <Arduino_USBHIDHost.h>
 
