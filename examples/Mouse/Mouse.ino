@@ -1,4 +1,13 @@
-/* This simple example shows how to read mouse data, like cursor position and key states, by registering a callback and listening for events */
+/*
+ * This simple example shows how to read mouse data, like cursor position and key states, by registering a callback and listening for events
+ * 
+ * Instructions:
+ * 1. Connect your Arduino Portenta C33 to a mid-carrier board;
+ * 2. Upload this sketch to the Portenta;
+ * 3. Open the Serial Monitor and chose the same baud rate as used in the sketch;
+ * 4. Connect your mouse to the USB-A connector and any movement or keypress should be printed as data to the console.
+ * Please not that scroll wheel data works inconsistently and might not function correctly with your mouse.
+ */
 
 #include <Arduino.h>
 #include <Arduino_USBHIDHost.h>

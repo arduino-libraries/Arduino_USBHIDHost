@@ -1,4 +1,12 @@
-/* This simple example shows how to read keyboard data by both listening for events and polling for available character data in the internal buffers of the USB HID Host */
+/*
+ * This simple example shows how to read keyboard data by both listening for events and polling for available character data in the internal buffers of the USB HID Host
+ * 
+ * Instructions:
+ * 1. Connect your Arduino Portenta C33 to a mid-carrier board;
+ * 2. Upload this sketch to the Portenta;
+ * 3. Open the Serial Monitor and chose the same baud rate as used in the sketch;
+ * 4. Connect your keyboard to the USB-A connector and any keypress should be printed to the console window.
+ */
 
 #include <Arduino.h>
 #include <Arduino_USBHIDHost.h>
