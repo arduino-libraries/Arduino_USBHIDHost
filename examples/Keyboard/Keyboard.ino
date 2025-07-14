@@ -4,7 +4,8 @@
  * Instructions:
  * 1. Connect your Arduino Portenta C33 to a mid-carrier board;
  * 2. Upload this sketch to the Portenta;
- * 3. Open the Serial Monitor and chose the same baud rate as used in the sketch;
+ * 3. Open the Serial Monitor and chose 115200 as baud rate;
+
  * 4. Connect your keyboard to the USB-A connector and any keypress should be printed to the console window.
  */
 
