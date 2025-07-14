@@ -9,7 +9,7 @@
  * 
  * Instructions:
  * 1. Connect your Arduino Portenta C33 to a mid-carrier board;
- * 2. Upload this sketch to the Portenta;
+ * 2. Upload this sketch to the board;
  * 3. Open the Serial Monitor and chose the same baud rate as used in the sketch;
  * 4. Connect your barcode scanner to the USB-A connector on the mid-carrier board and scan away.
  */
