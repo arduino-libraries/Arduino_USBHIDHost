@@ -2,9 +2,10 @@
  * This example shows how to use the Arduino Portenta C33 USBHIDHost library to read barcodes like the ones printed on common
  * products packaging.
  * 
- * By connecting a  handheld  barcode  reader  to the USB-A port  on  the  mid-carrier board  of  your Arduino Portenta C33,
- * you  should  immediately  be  able to  read standard 13-digit  bar codes  on any  ordinary  commercial  product packaging.
- * Please note that barcodes longer than 13 digits will result in the "Invalid character detected, resetting..." being printed.
+ * By connecting a handheld barcode reader to the USB-A port on the mid-carrier board of your 
+ * Arduino Portenta C33, you should immediately be able to read standard 13-digit bar codes on 
+ * any ordinary commercial product packaging.
+ * Please note that barcodes longer than 13 digits will result in "Invalid character detected, resetting..." messages being printed.
  * 
  * Instructions:
  * 1. Connect your Arduino Portenta C33 to a mid-carrier board;
