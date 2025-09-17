@@ -42,9 +42,12 @@ void onMouseConnected() {
 }
 
 // Mouse movement/button event callback
+// Note here the use of the "eventReceived" global variable. Since this function is called in an interrupt context,
+// we cannot do the processing and printin of data using Serial.print inside the interrupt, because it takes too much time.
+// Therefore, we set a global flag to "true", which is then checked in the "loop", outside of the ISR (interrupt service routine), then set back to "false".
+// An even better and more robut, but also more complex, way of handling this is by using a buffer queue for the mouse data and a state machine to process it.
 void onMouseEvent(const HIDMouseEvent &event) {
   eventReceived = true;
-  mouseEvent = event;
 }
 
 void setup() {

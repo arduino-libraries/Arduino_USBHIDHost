@@ -1,5 +1,8 @@
 /*
- * This simple example shows how to read keyboard data by both listening for events and polling for available character data in the internal buffers of the USB HID Host
+ * This simple example shows how to read keyboard data by both listening for events and polling for available character data in the internal buffers of the USB HID Host.
+ * There are two general ways user input can be detected, either by constantly checking for the state of a buffer (or pin, for example), which we refer to as the "polling" method, or
+ * by having some event fire as soon as the user input (key press in this case) is detected, which, in turn, calls a function we registered previously with the lower layers.
+ * The below example demonstrates both these methods of capturing user input.
  * 
  * Instructions:
  * 1. Connect your Arduino Portenta C33 to a mid-carrier board;
@@ -18,8 +21,9 @@ void onKeyboardConnected() {
   Serial.println("Keyboard connected (callback).");
 }
 
+// This function will now be called every time a key is pressed by the user, as a single event
 void onKeyboardEvent(uint8_t key) {
-  Serial.print("Keyboard event (callback): ");
+  Serial.print("Key pressed (event callback): ");
   Serial.println((char) key);
 }
 
@@ -33,11 +37,12 @@ void setup() {
 }
 
 void loop() {
-  kb.poll();
+  kb.poll(); // This function will continuosly check if a key has been pressed, this is generally refered to as "polling"
 
-  // Second way of reading back the keystrokes is via polling for available characters
+  // If keystrokes were registered, we enter a second loop and print out the entire buffer
   while (kb.available() > 0) {
     char c = kb.read();
+    Serial.print("Key pressed (polling detection): ");
     Serial.println(c);
   }
 }

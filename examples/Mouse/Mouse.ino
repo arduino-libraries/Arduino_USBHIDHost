@@ -5,9 +5,9 @@
  * 1. Connect your Arduino Portenta C33 to a mid-carrier board;
  * 2. Upload this sketch to the board;
 
- * 3. Open the Serial Monitor and chose the same baud rate as used in the sketch;
+ * 3. Open the Serial Monitor and chose the same baud rate (115200 in this case) as used in the sketch;
  * 4. Connect your mouse to the USB-A connector and any movement or keypress should be printed as data to the console.
- * Please not that scroll wheel data works inconsistently and might not function correctly with your mouse.
+ * Please note that the scroll wheel data works inconsistently and might not function correctly with your mouse.
  */
 
 #include <Arduino.h>
