@@ -37,7 +37,7 @@ void setup() {
 }
 
 void loop() {
-  kb.poll(); // This function will continuosly check if a key has been pressed, this is generally refered to as "polling"
+  kb.poll(); // This function will continuously check if a key has been pressed, this is generally referred to as "polling"
 
   // If keystrokes were registered, we enter a second loop and print out the entire buffer
   while (kb.available() > 0) {
