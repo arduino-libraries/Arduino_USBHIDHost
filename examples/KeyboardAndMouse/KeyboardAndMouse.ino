@@ -5,7 +5,7 @@
  * USB-A port and might therefore lead to a reset or failure to be enumerated by the board. Ideally, use basic USB keyboards and mice, these should work best.
  *
  * Instructions:
- * 1. Connect your Arduino Portenta C33 to a mid-carrier board, then attach to the USB port a USB hub, through which you can then conncet both a keyboard and a mouse simultaneously;
+ * 1. Connect your Arduino Portenta C33 to a mid-carrier board, then attach to the USB port a USB hub, through which you can then connect both a keyboard and a mouse simultaneously;
  * 2. Upload this sketch to the Portenta;
  * 3. Open the Serial Monitor and chose the same baud rate as used in the sketch;
  * 4. Connect a USB hub to the USB-A connector on the mid-carrier board;
