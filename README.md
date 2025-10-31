@@ -95,12 +95,3 @@ Tested with: basic wired mouse Genius X-Scroll GM-110020, new model GamingX Trus
 In order to use two (or more) HID devices connected via a USB hub to your Portenta C33 board, please open "tusb_config.h" and make sure that "CFG_TUH_HUB" is set to value 1, and that "CFG_TUH_HID" is set to the number of HID  devices you intend to connect to your Arduino (2 in this example). 
 Please also keep in mind that some keyboards and mice which include advanced illumination features might draw more power than the Arduino is able to provide on its
 USB-A port and might therefore lead to a reset or failure to be enumerated by the board. Ideally, use basic USB keyboards and mice, these should work best.
-
-### Temp. Development instructions 
-Before all the changes get merged into the core, you will have to do some modifications to get this library to compile.
-
-1. Enable TinyUSB HID Host support 
-
-In the core by modify [variants/PORTENTA_C33/tusb_config.h](https://github.com/arduino/ArduinoCore-renesas/blob/main/variants/PORTENTA_C33/tusb_config.h).
-On line 106, add `#define CFG_TUH_HID              1`. 
-Check [this PR](https://github.com/arduino/ArduinoCore-renesas/compare/main...cristidragomir97:ArduinoCore-renesas:hid_host_c33) for more information.
