@@ -1,13 +1,11 @@
 /*
  * This simple example demonstrates how to read mouse and keyboard data, by connecting these devices at the same time to the Portenta, via a USB hub
- * 
- * In order to use two (or more) HID devices connected via a USB hub to your Portenta C33 board, please open "tusb_config.h" below (right click -> Go To Definition)
- * and make sure that "CFG_TUH_HUB" is set to value 1, and that "CFG_TUH_HID" is set to the number of HID devices you intend to connect to your Arduino (2 in this example). 
- * Please also keep in mind that some keyboards and mice which include advanced illumination features might draw more power than the Arduino is able to provide on its
+ *
+ * Please keep in mind that some keyboards and mice which include advanced illumination features might draw more power than the Arduino is able to provide on its
  * USB-A port and might therefore lead to a reset or failure to be enumerated by the board. Ideally, use basic USB keyboards and mice, these should work best.
  *
  * Instructions:
- * 1. Connect your Arduino Portenta C33 to a mid-carrier board;
+ * 1. Connect your Arduino Portenta C33 to a mid-carrier board, then attach to the USB port a USB hub, through which you can then connect both a keyboard and a mouse simultaneously;
  * 2. Upload this sketch to the Portenta;
  * 3. Open the Serial Monitor and chose the same baud rate as used in the sketch;
  * 4. Connect a USB hub to the USB-A connector on the mid-carrier board;
@@ -16,7 +14,6 @@
 
 #include <Arduino.h>
 #include <Arduino_USBHIDHost.h>
-#include <tusb_config.h>
 
 // Global device instances
 USBHIDKeyboard kb;
